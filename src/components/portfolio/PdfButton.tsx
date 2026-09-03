@@ -8,9 +8,9 @@ export function PdfButton({
   dark = false,
 }: {
   href: string | null;
-  label?: string;
-  missingLabel?: string;
-  dark?: boolean;
+  label?: string | undefined;
+  missingLabel?: string | undefined;
+  dark?: boolean | undefined;
 }) {
   if (!href) {
     return (
