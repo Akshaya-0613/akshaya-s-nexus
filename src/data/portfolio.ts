@@ -160,12 +160,36 @@ export const education = [
   },
 ];
 
-export const internship = {
-  title: "Agentic AI Programme",
-  org: "DATAPRO",
-  description:
-    "AI-focused internship programme centred on agentic AI concepts and applied artificial intelligence workflows.",
-};
+export const internships = [
+  {
+    title: "Agentic AI Internship",
+    org: "DATAPRO",
+    period: "April - May 2026",
+    description:
+      "AI-focused internship programme centred on agentic AI concepts and applied artificial intelligence workflows.",
+  },
+  {
+    title: "AWS Cloud Foundation and Architecture Intern",
+    org: "AICTE Edu Skills Foundation",
+    period: "April - June 2025",
+    description:
+      "Developed a solid understanding of core AWS services including EC2, S3, RDS, and IAM, along with cloud computing fundamentals, global infrastructure, and AWS architecture principles.",
+  },
+  {
+    title: "Google Artificial Intelligence and Machine Learning Intern",
+    org: "Google",
+    period: "January - March 2025",
+    description:
+      "Explored real-world applications of artificial intelligence and machine learning through hands-on projects.",
+  },
+  {
+    title: "Celonis Process Mining Intern",
+    org: "Celonis",
+    period: "October - December 2024",
+    description:
+      "Gained hands-on experience in process mining using the Celonis EMS platform.",
+  },
+];
 
 /**
  * Certificate title -> PDF path in /public/certificates.
