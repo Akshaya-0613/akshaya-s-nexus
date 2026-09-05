@@ -1,9 +1,13 @@
-import { ExternalLink, Github } from "lucide-react";
-import { projects } from "@/data/portfolio";
+import { useState } from "react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { projects, type Project } from "@/data/portfolio";
 import { Section } from "./Section";
 import { Reveal } from "./Reveal";
+import { ProjectDetail } from "./ProjectDetail";
 
 export function Projects() {
+  const [active, setActive] = useState<Project | null>(null);
+
   return (
     <Section id="projects" eyebrow="Selected work" title="Featured Projects" dark>
       <div className="grid gap-6 lg:grid-cols-2">
@@ -23,6 +27,13 @@ export function Projects() {
                 ))}
               </ul>
               <div className="mt-6 flex flex-wrap gap-3 pt-1">
+                <button
+                  onClick={() => setActive(p)}
+                  className="group inline-flex items-center gap-2 rounded-lg bg-cream px-4 py-2 text-xs font-semibold text-plum-deep transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  View Project
+                  <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                </button>
                 {p.github && (
                   <a
                     href={p.github}
@@ -39,7 +50,7 @@ export function Projects() {
                     href={p.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-cream px-4 py-2 text-xs font-semibold text-plum-deep transition-transform duration-300 hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 rounded-lg border border-cream/30 px-4 py-2 text-xs font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/10"
                   >
                     <ExternalLink className="size-4" />
                     Live Demo
@@ -50,6 +61,8 @@ export function Projects() {
           </Reveal>
         ))}
       </div>
+
+      {active && <ProjectDetail project={active} onClose={() => setActive(null)} />}
     </Section>
   );
 }
