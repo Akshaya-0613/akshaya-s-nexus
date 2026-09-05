@@ -107,19 +107,20 @@ export const internship = {
  * Set `pdf: null` when the PDF has not been uploaded yet.
  */
 export const certificates: { title: string; issuer?: string; pdf: string | null }[] = [
-  { title: "AWS Cloud Computing", issuer: "AWS", pdf: null },
+  { title: "AWS Cloud Computing", issuer: "AWS", pdf: "/certificates/aws-cloud-computing.pdf" },
   { title: "Celonis Process Mining Virtual Internship", issuer: "Celonis", pdf: "/certificates/celonis-process-mining.pdf" },
   { title: "Google AI/ML", issuer: "Google", pdf: "/certificates/google-ai-ml.pdf" },
   { title: "Android Studio", issuer: "Google / Android", pdf: "/certificates/android-studio.pdf" },
-  { title: "Forage Data Analyst", issuer: "Forage", pdf: null },
-  { title: "Quantum Computing", pdf: null },
-  { title: "Java Full Stack Developer", pdf: null },
-  { title: "Programming Fundamentals Using Python – 1", pdf: null },
+  { title: "Forage Data Analyst", issuer: "Forage", pdf: "/certificates/forage-data-analyst.pdf" },
+  { title: "Quantum Computing", pdf: "/certificates/quantum-computing.pdf" },
+  { title: "Java Full Stack Developer", pdf: "/certificates/java-full-stack.pdf" },
+  { title: "Programming Fundamentals Using Python – 1", pdf: "/certificates/python-fundamentals-1.pdf" },
   { title: "Programming Fundamentals Using Python – 2", pdf: "/certificates/python-fundamentals-2.pdf" },
   { title: "Design Thinking", pdf: "/certificates/design-thinking.pdf" },
-  { title: "Data Structures and Algorithm with C", pdf: null },
+  { title: "Data Structures and Algorithm with C", pdf: "/certificates/dsa-with-c.pdf" },
   { title: "AWS Generative AI", issuer: "AWS", pdf: "/certificates/aws-generative-ai.pdf" },
 ];
+
 
 export const achievements: {
   title: string;
