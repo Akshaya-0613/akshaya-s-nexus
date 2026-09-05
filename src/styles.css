@@ -232,3 +232,12 @@
 @utility pulse-glow {
   animation: pulse-glow 5s ease-in-out infinite;
 }
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.98) }
+  to { opacity: 1; transform: none }
+}
+
+@utility reveal-in {
+  animation: modal-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
