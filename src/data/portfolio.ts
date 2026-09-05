@@ -66,24 +66,89 @@ export const skillGroups = [
   { title: "Core Skills", icon: "Sparkles", items: ["Object-Oriented Programming", "Problem Solving", "REST API Development", "Responsive Design", "Backend Development", "Database Management"] },
 ];
 
-export const projects = [
+export type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  stack: string[];
+  github: string | null;
+  demo: string | null;
+  language: string;
+  focus: string;
+  type: string;
+  overview: string;
+  problem: string;
+  solution: string;
+  features: string[];
+  outcome: string;
+  /** Add screenshot URLs here when available — empty shows "Demo screenshots coming soon". */
+  screenshots: { src: string; alt: string }[];
+};
+
+export const projects: Project[] = [
   {
+    slug: "fake-job-posting-detection",
     title: "Fake Job Posting Detection",
     description:
       "A machine-learning based application that analyzes job posting content and predicts whether a job advertisement is genuine or potentially fraudulent. The system uses text processing and machine learning to provide a prediction with confidence information.",
     stack: ["Python", "Machine Learning", "Scikit-learn", "Pandas", "NumPy", "TF-IDF", "Flask"],
     github: "https://github.com/Akshaya-0613/fake-job-posting-detection",
     demo: "https://fake-job-posting-detection-brxq.onrender.com",
+    language: "Python",
+    focus: "Text Processing & Machine Learning Classification",
+    type: "Solo Project",
+    overview:
+      "A machine-learning based application that analyzes job posting content and predicts whether a job advertisement is genuine or potentially fraudulent. The system processes job-posting text and uses machine learning to provide a prediction with confidence information.",
+    problem:
+      "Online job platforms can contain fraudulent or misleading job advertisements that may deceive job seekers. The project aims to provide an automated way to analyze job-posting content and identify potentially fraudulent postings.",
+    solution:
+      "The application processes the text content of a job posting and applies machine-learning based text classification to predict whether the posting is genuine or potentially fraudulent. Text features are extracted using TF-IDF and the trained model provides a prediction along with confidence information through a web interface.",
+    features: [
+      "Analyze job posting content",
+      "Text preprocessing",
+      "TF-IDF based feature extraction",
+      "Machine-learning classification",
+      "Genuine / Fraudulent prediction",
+      "Confidence information",
+      "Flask web interface",
+      "Real-time prediction through the application",
+    ],
+    outcome:
+      "Built a practical machine-learning application that demonstrates text classification, feature extraction, model integration, and deployment through a Flask-based web interface.",
+    screenshots: [],
   },
   {
+    slug: "resume-analyzer",
     title: "Resume Analyzer",
     description:
       "A web-based resume analysis application designed to analyze resume content and provide useful insights to help users improve their resumes.",
     stack: ["Java", "Spring Boot", "Apache PDFBox", "Thymeleaf", "Bootstrap"],
     github: null,
     demo: "https://resume-analyzer-production-b70e.up.railway.app",
+    language: "Java",
+    focus: "Application Development",
+    type: "Solo Project",
+    overview:
+      "A web-based resume analysis application designed to analyze resume content and provide useful insights to help users improve their resumes. The application uses Java and Spring Boot to process resume documents and present useful analysis through a web interface.",
+    problem:
+      "Creating an effective resume can be challenging because users may not know whether their resume content is structured clearly or contains useful information for improving their profile. The project aims to provide a simple application that analyzes resume content and gives users useful insights.",
+    solution:
+      "The application uses a Spring Boot backend to process uploaded resume documents and analyze their content. Apache PDFBox is used for PDF processing, while Thymeleaf and Bootstrap are used to provide the web interface.",
+    features: [
+      "Resume PDF upload",
+      "Resume content extraction",
+      "Resume analysis",
+      "Useful resume insights",
+      "PDF processing",
+      "Web-based interface",
+      "Structured presentation of analysis",
+    ],
+    outcome:
+      "Built a practical web application that demonstrates backend development using Java and Spring Boot, PDF document processing with Apache PDFBox, and integration of a web interface using Thymeleaf and Bootstrap.",
+    screenshots: [],
   },
 ];
+
 
 export const education = [
   {
